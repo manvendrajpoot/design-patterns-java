@@ -1,12 +1,12 @@
 package main.java.org.manvendra.Basics.OOPs;
 
-abstract  public class Card {
+public class Card implements PaymentMethod{
     private String cardNum;
 
     private String cardHolderName;
 
     /* Parameterized const */
-    public Card(String cardNum, String cardHolderName) {
+    Card(String cardNum, String cardHolderName) {
         this.cardNum = cardNum;
         this.cardHolderName = cardHolderName;
     }
@@ -19,5 +19,8 @@ abstract  public class Card {
         return cardHolderName;
     }
 
-    abstract void pay() {}
+    @Override
+    public void pay() {
+
+    }
 }
